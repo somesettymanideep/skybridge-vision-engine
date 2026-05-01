@@ -29,8 +29,8 @@ export const Navbar = () => {
     <header
       className="fixed top-0 inset-x-0 z-50 transition-smooth bg-white/95 backdrop-blur-xl shadow-card"
     >
-      <nav className="container flex items-center justify-between h-20">
-        <Logo className="h-9 md:h-10" />
+      <nav className="container flex items-center justify-between h-24">
+        <Logo className="h-14 md:h-16" />
         <ul className="hidden lg:flex items-center gap-10">
           {links.map((l) => (
             <li key={l.to}>
@@ -62,7 +62,7 @@ export const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="lg:hidden absolute inset-x-0 top-20 bg-background/95 backdrop-blur-xl border-t border-border">
+        <div className="lg:hidden absolute inset-x-0 top-24 bg-background/95 backdrop-blur-xl border-t border-border">
           <ul className="container py-6 flex flex-col gap-4">
             {links.map((l, i) => (
               <li key={l.to} className="animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>

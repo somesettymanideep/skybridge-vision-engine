@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="bg-dark text-dark-foreground">
       <div className="container py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <Logo className="h-10" inverted />
+          <Logo className="h-14" inverted />
           <p className="mt-4 font-accent text-sm text-primary-glow">Bridging Your Business to the Digital Sky</p>
           <p className="mt-3 text-sm text-dark-foreground/70 leading-relaxed">
             A global digital growth agency engineering measurable results for ambitious brands.
