@@ -8,6 +8,7 @@ import { ArrowRight, Check, Search, Code2, Share2, Megaphone, Palette, BarChart3
 
 const services = [
   {
+    slug: "seo-optimization",
     icon: Search,
     label: "SEO Optimization",
     title: "Get Found by the Right Customers",
@@ -19,6 +20,7 @@ const services = [
     metric: "↑ 312% Organic Traffic",
   },
   {
+    slug: "web-development",
     icon: Code2,
     label: "Web Development",
     title: "Websites Engineered to Convert",
@@ -30,6 +32,7 @@ const services = [
     metric: "98 PageSpeed Score",
   },
   {
+    slug: "social-media-marketing",
     icon: Share2,
     label: "Social Media Marketing",
     title: "Build Communities That Buy",
@@ -41,6 +44,7 @@ const services = [
     metric: "+5x Engagement",
   },
   {
+    slug: "paid-advertising",
     icon: Megaphone,
     label: "Paid Advertising",
     title: "Google & Meta Ads with Maximum ROI",
@@ -52,6 +56,7 @@ const services = [
     metric: "8.4x Average ROAS",
   },
   {
+    slug: "logo-branding",
     icon: Palette,
     label: "Logo & Branding",
     title: "Identities That Make You Unforgettable",
@@ -63,6 +68,7 @@ const services = [
     metric: "100% Custom",
   },
   {
+    slug: "digital-marketing",
     icon: BarChart3,
     label: "Digital Marketing",
     title: "Full-Funnel Strategy, Built for Growth",
@@ -130,7 +136,7 @@ const Services = () => (
                   ))}
                 </ul>
                 <Button variant="hero" size="lg" className="mt-8" asChild>
-                  <Link to="/contact">Get Started <ArrowRight /></Link>
+                  <Link to={`/services/${s.slug}`}>Learn More <ArrowRight /></Link>
                 </Button>
               </Reveal>
             </div>
