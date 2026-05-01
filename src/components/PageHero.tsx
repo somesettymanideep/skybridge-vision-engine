@@ -7,12 +7,12 @@ export const PageHero = ({
   breadcrumb,
   image,
 }: {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   breadcrumb: string;
   image?: string;
 }) => (
-  <section className="relative pt-32 pb-24 text-dark-foreground overflow-hidden isolate">
+  <section className="relative pt-32 pb-16 text-dark-foreground overflow-hidden isolate">
     {/* Background image */}
     {image && (
       <img
