@@ -11,14 +11,20 @@ import { Link } from "react-router-dom";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
+import svcSeo from "@/assets/svc-seo.jpg";
+import svcWeb from "@/assets/svc-web.jpg";
+import svcSocial from "@/assets/svc-social.jpg";
+import svcAds from "@/assets/svc-ads.jpg";
+import svcBrand from "@/assets/svc-brand.jpg";
+import svcDigital from "@/assets/svc-digital.jpg";
 
 const services = [
-  { icon: Search, title: "SEO Optimization", desc: "Rank higher, get found faster, grow organically." },
-  { icon: Code2, title: "Web Development", desc: "Custom, fast, mobile-first websites that convert." },
-  { icon: Share2, title: "Social Media Marketing", desc: "Build community and engagement across all platforms." },
-  { icon: Megaphone, title: "Paid Advertising", desc: "Google & Meta Ads with maximum ROI targeting." },
-  { icon: Palette, title: "Logo & Branding", desc: "Identity design that makes your brand unforgettable." },
-  { icon: BarChart3, title: "Digital Marketing", desc: "Full-funnel strategy from awareness to conversion." },
+  { icon: Search, title: "SEO Optimization", desc: "Rank higher, get found faster, grow organically.", image: svcSeo },
+  { icon: Code2, title: "Web Development", desc: "Custom, fast, mobile-first websites that convert.", image: svcWeb },
+  { icon: Share2, title: "Social Media Marketing", desc: "Build community and engagement across all platforms.", image: svcSocial },
+  { icon: Megaphone, title: "Paid Advertising", desc: "Google & Meta Ads with maximum ROI targeting.", image: svcAds },
+  { icon: Palette, title: "Logo & Branding", desc: "Identity design that makes your brand unforgettable.", image: svcBrand },
+  { icon: BarChart3, title: "Digital Marketing", desc: "Full-funnel strategy from awareness to conversion.", image: svcDigital },
 ];
 
 const testimonials = [
@@ -90,13 +96,23 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
-                <div className="group relative bg-card border border-border rounded-2xl p-8 h-full transition-smooth hover:-translate-y-2 hover:shadow-glow hover:border-primary/30">
-                  <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center shadow-glow mb-6">
+                <div className="group relative bg-card border border-border rounded-2xl p-8 h-full transition-smooth hover:-translate-y-2 hover:shadow-glow hover:border-primary/30 overflow-hidden isolate">
+                  {/* Hover background image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-smooth duration-500 -z-10"
+                    style={{ backgroundImage: `url(${s.image})` }}
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-card via-card/85 to-card/60 opacity-0 group-hover:opacity-100 transition-smooth duration-500 -z-10"
+                    aria-hidden="true"
+                  />
+                  <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center shadow-glow mb-6 relative">
                     <s.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-display font-bold text-xl mb-3">{s.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-                  <Link to="/services" className="mt-6 inline-flex items-center gap-1 text-sm font-accent font-semibold gradient-text opacity-0 group-hover:opacity-100 transition-smooth">
+                  <h3 className="font-display font-bold text-xl mb-3 relative">{s.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed relative group-hover:text-foreground/90 transition-smooth">{s.desc}</p>
+                  <Link to="/services" className="mt-6 inline-flex items-center gap-1 text-sm font-accent font-semibold gradient-text opacity-0 group-hover:opacity-100 transition-smooth relative">
                     Learn More <ArrowRight className="w-4 h-4 text-primary" />
                   </Link>
                 </div>
