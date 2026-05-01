@@ -12,7 +12,7 @@ export const PageHero = ({
   breadcrumb: string;
   image?: string;
 }) => (
-  <section className="relative pt-32 pb-16 text-dark-foreground overflow-hidden isolate">
+  <section className="relative min-h-[350px] flex items-center pt-28 pb-10 text-dark-foreground overflow-hidden isolate">
     {/* Background image */}
     {image && (
       <img
@@ -53,18 +53,12 @@ export const PageHero = ({
 
     <div className="container relative z-10 text-center">
       <Reveal>
-        <p className="font-accent text-sm uppercase tracking-widest text-primary-glow mb-4">
-          <Link to="/" className="hover:underline">Home</Link>{" "}
-          <span className="mx-2">›</span> {breadcrumb}
+        <p className="font-accent text-sm md:text-base uppercase tracking-[0.25em] text-white">
+          <Link to="/" className="text-primary-glow hover:underline">Home</Link>
+          <span className="mx-3 text-white/50">›</span>
+          <span className="text-white">{breadcrumb}</span>
         </p>
       </Reveal>
-      {title && (
-        <Reveal delay={120}>
-          <h1 className="font-display font-extrabold text-4xl md:text-6xl leading-tight max-w-4xl mx-auto drop-shadow-[0_4px_30px_rgba(0,0,0,0.4)]">
-            {title}
-          </h1>
-        </Reveal>
-      )}
     </div>
   </section>
 );
