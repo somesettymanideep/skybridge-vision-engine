@@ -12,9 +12,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Montserrat', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        accent: ['Poppins', 'sans-serif'],
+        display: ['Biennale', 'Montserrat', 'sans-serif'],
+        body: ['Biennale', 'Inter', 'sans-serif'],
+        accent: ['Biennale', 'Poppins', 'sans-serif'],
         biennale: ['Biennale', 'Montserrat', 'sans-serif'],
       },
       colors: {
