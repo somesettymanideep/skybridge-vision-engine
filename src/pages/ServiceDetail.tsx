@@ -292,9 +292,21 @@ const ServiceDetail = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative pt-36 pb-16 overflow-hidden">
-        <div className="absolute inset-0 gradient-hero" />
-        <div className="absolute inset-0 opacity-20" style={{
+      <section className="relative pt-36 pb-16 overflow-hidden isolate">
+        <img
+          src={active.image}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover -z-20"
+        />
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              "linear-gradient(135deg, hsl(var(--primary-deep) / 0.92) 0%, hsl(var(--primary) / 0.82) 55%, hsl(var(--dark) / 0.94) 100%)",
+          }}
+        />
+        <div className="absolute inset-0 opacity-20 -z-10" style={{
           backgroundImage: "radial-gradient(circle at 20% 30%, hsl(var(--accent)) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }} />

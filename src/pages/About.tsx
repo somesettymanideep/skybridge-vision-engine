@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { Eye, Rocket, Linkedin } from "lucide-react";
 import team1 from "@/assets/team-1.jpg";
 import founder from "@/assets/founder.jpg";
+import bgAbout from "@/assets/bg-about.jpg";
 
 const timeline = [
   ["2012", "Founded"],
@@ -29,6 +30,7 @@ const About = () => (
       breadcrumb="About Us"
       title="The Team That Bridges Vision to Reality"
       subtitle="We're a global collective of strategists, designers, and engineers united by one mission — your growth."
+      image={bgAbout}
     />
 
     {/* Story */}

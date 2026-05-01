@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { toast } from "sonner";
 import { MapPin, Phone, Mail, Clock, ArrowRight, Lock, Linkedin, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import bgContact from "@/assets/bg-contact.jpg";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Name is required").max(100),
@@ -57,6 +58,7 @@ const Contact = () => {
         breadcrumb="Contact Us"
         title="Let's Start Something Great Together"
         subtitle="Reach out today — your free strategy consultation is just one message away."
+        image={bgContact}
       />
 
       <section className="py-24 bg-background">

@@ -5,6 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Search, Code2, Share2, Megaphone, Palette, BarChart3 } from "lucide-react";
+import bgServices from "@/assets/bg-services.jpg";
 
 const services = [
   {
@@ -103,6 +104,7 @@ const Services = () => (
       breadcrumb="Services"
       title="Digital Services Engineered for Growth"
       subtitle="Everything your business needs to dominate the digital landscape — under one roof."
+      image={bgServices}
     />
 
     <section className="py-24 bg-background">
