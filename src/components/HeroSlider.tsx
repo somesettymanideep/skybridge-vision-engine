@@ -151,17 +151,29 @@ export const HeroSlider = () => {
         <div className="grid lg:grid-cols-5 gap-10 w-full items-center">
           <div className="lg:col-span-3 text-white">
             {slides.map((s, idx) => idx === i && (
-              <div key={idx} className="space-y-6">
-                <span className="inline-flex items-center px-4 py-2 rounded-full glass text-sm font-accent text-white animate-fade-up">
+              <div key={`${idx}-${i}`} className="space-y-6">
+                <span
+                  className="inline-flex items-center px-4 py-2 rounded-full glass text-sm font-accent text-white animate-hero-line"
+                  style={{ animationDelay: "60ms" }}
+                >
                   {s.badge}
                 </span>
-                <h1 className="font-biennale font-extrabold text-3xl md:text-4xl lg:text-5xl leading-[1.1] animate-fade-up" style={{ animationDelay: "120ms" }}>
+                <h1
+                  className="h-section font-biennale text-white text-3xl md:text-4xl lg:text-5xl !leading-[1.1] animate-hero-rise"
+                  style={{ animationDelay: "180ms" }}
+                >
                   {s.title}
                 </h1>
-                <p className="font-biennale text-base md:text-lg text-white/80 max-w-xl animate-fade-up" style={{ animationDelay: "240ms" }}>
+                <p
+                  className="font-biennale text-base md:text-lg text-white/80 max-w-xl animate-hero-line"
+                  style={{ animationDelay: "360ms" }}
+                >
                   {s.subtitle}
                 </p>
-                <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "360ms" }}>
+                <div
+                  className="flex flex-wrap gap-4 animate-hero-line"
+                  style={{ animationDelay: "520ms" }}
+                >
                   <Button variant="hero" size="xl">{s.ctaPrimary}</Button>
                   <Button variant="heroOutline" size="xl">
                     {s.ctaSecondary} <ArrowRight />
