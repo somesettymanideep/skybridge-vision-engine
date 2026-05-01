@@ -15,6 +15,7 @@ export default {
         display: ['Montserrat', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         accent: ['Poppins', 'sans-serif'],
+        biennale: ['Biennale', 'Montserrat', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
