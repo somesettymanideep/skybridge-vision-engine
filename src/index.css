@@ -81,23 +81,33 @@
 
 @layer base {
   * { @apply border-border; }
-  body {
-    @apply bg-background text-foreground font-body antialiased;
+  html, body {
+    font-family: 'Biennale', 'Inter', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-size: 15px;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Biennale', 'Montserrat', sans-serif;
+    font-family: 'Biennale', sans-serif;
     font-weight: 800;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
   }
+  /* Global heading scale — smaller, unified */
+  h1 { @apply text-3xl md:text-4xl lg:text-5xl; }
+  h2 { @apply text-2xl md:text-3xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  h4 { @apply text-lg md:text-xl; }
+  h5 { @apply text-base md:text-lg; }
+  h6 { @apply text-sm md:text-base uppercase tracking-wider; }
 }
 
 @layer components {
   /* Unified section heading scale */
   .h-section {
-    @apply font-biennale font-extrabold text-2xl md:text-3xl lg:text-[2.25rem] leading-[1.15] tracking-tight;
+    @apply font-biennale font-extrabold text-2xl md:text-3xl leading-[1.15] tracking-tight;
   }
   .h-sub {
-    @apply font-biennale font-bold text-xl md:text-2xl leading-snug tracking-tight;
+    @apply font-biennale font-bold text-lg md:text-xl leading-snug tracking-tight;
   }
   .h-eyebrow {
     @apply font-accent text-xs uppercase tracking-[0.3em] text-primary;
