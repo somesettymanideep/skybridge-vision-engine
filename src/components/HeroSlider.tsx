@@ -155,10 +155,10 @@ export const HeroSlider = () => {
                 <span className="inline-flex items-center px-4 py-2 rounded-full glass text-sm font-accent text-white animate-fade-up">
                   {s.badge}
                 </span>
-                <h1 className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl leading-[1.05] animate-fade-up" style={{ animationDelay: "120ms" }}>
+                <h1 className="font-biennale font-extrabold text-3xl md:text-4xl lg:text-5xl leading-[1.1] animate-fade-up" style={{ animationDelay: "120ms" }}>
                   {s.title}
                 </h1>
-                <p className="text-lg md:text-xl text-white/80 max-w-xl animate-fade-up" style={{ animationDelay: "240ms" }}>
+                <p className="font-biennale text-base md:text-lg text-white/80 max-w-xl animate-fade-up" style={{ animationDelay: "240ms" }}>
                   {s.subtitle}
                 </p>
                 <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "360ms" }}>
