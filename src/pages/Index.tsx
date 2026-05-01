@@ -19,12 +19,12 @@ import svcBrand from "@/assets/svc-brand.jpg";
 import svcDigital from "@/assets/svc-digital.jpg";
 
 const services = [
-  { icon: Search, title: "SEO Optimization", desc: "Rank higher, get found faster, grow organically.", image: svcSeo },
-  { icon: Code2, title: "Web Development", desc: "Custom, fast, mobile-first websites that convert.", image: svcWeb },
-  { icon: Share2, title: "Social Media Marketing", desc: "Build community and engagement across all platforms.", image: svcSocial },
-  { icon: Megaphone, title: "Paid Advertising", desc: "Google & Meta Ads with maximum ROI targeting.", image: svcAds },
-  { icon: Palette, title: "Logo & Branding", desc: "Identity design that makes your brand unforgettable.", image: svcBrand },
-  { icon: BarChart3, title: "Digital Marketing", desc: "Full-funnel strategy from awareness to conversion.", image: svcDigital },
+  { slug: "seo-optimization", icon: Search, title: "SEO Optimization", desc: "Rank higher, get found faster, grow organically.", image: svcSeo },
+  { slug: "web-development", icon: Code2, title: "Web Development", desc: "Custom, fast, mobile-first websites that convert.", image: svcWeb },
+  { slug: "social-media-marketing", icon: Share2, title: "Social Media Marketing", desc: "Build community and engagement across all platforms.", image: svcSocial },
+  { slug: "paid-advertising", icon: Megaphone, title: "Paid Advertising", desc: "Google & Meta Ads with maximum ROI targeting.", image: svcAds },
+  { slug: "logo-branding", icon: Palette, title: "Logo & Branding", desc: "Identity design that makes your brand unforgettable.", image: svcBrand },
+  { slug: "digital-marketing", icon: BarChart3, title: "Digital Marketing", desc: "Full-funnel strategy from awareness to conversion.", image: svcDigital },
 ];
 
 const testimonials = [
@@ -117,7 +117,7 @@ const Index = () => {
                   </div>
                   <h3 className="font-display font-bold text-xl mb-3 relative">{s.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed relative group-hover:text-foreground/90 group-data-[active=true]:text-foreground/90 transition-smooth">{s.desc}</p>
-                  <Link to="/services" className="mt-6 inline-flex items-center gap-1 text-sm font-accent font-semibold gradient-text opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth relative">
+                  <Link to={`/services/${s.slug}`} className="mt-6 inline-flex items-center gap-1 text-sm font-accent font-semibold gradient-text opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth relative">
                     Learn More <ArrowRight className="w-4 h-4 text-primary" />
                   </Link>
                 </div>
