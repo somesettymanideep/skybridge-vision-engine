@@ -36,7 +36,6 @@ const testimonials = [
 
 const Index = () => {
   const [t, setT] = useState(0);
-  const [activeService, setActiveService] = useState<number | null>(null);
   const nextT = () => setT((x) => (x + 1) % testimonials.length);
   const prevT = () => setT((x) => (x - 1 + testimonials.length) % testimonials.length);
 
