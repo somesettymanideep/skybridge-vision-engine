@@ -159,7 +159,7 @@ export const HeroSlider = () => {
                   {s.badge}
                 </span>
                 <h1
-                  className="h-section font-biennale text-white text-3xl md:text-4xl lg:text-5xl !leading-[1.1] animate-hero-rise"
+                  className="h-section font-biennale text-white text-3xl md:text-4xl lg:text-5xl !leading-[1.25] pb-1 animate-hero-rise"
                   style={{ animationDelay: "220ms" }}
                 >
                   {s.title}
