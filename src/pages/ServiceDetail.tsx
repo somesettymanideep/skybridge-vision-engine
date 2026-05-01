@@ -368,7 +368,7 @@ const ServiceDetail = () => {
               <p className="text-sm text-white/85 mt-2">
                 Free 30-minute strategy call with a senior consultant.
               </p>
-              <Button variant="glass" size="sm" className="mt-4 w-full" asChild>
+              <Button variant="heroOutline" size="sm" className="mt-4 w-full" asChild>
                 <Link to="/contact">Book a Call <ArrowRight className="w-4 h-4" /></Link>
               </Button>
             </div>
