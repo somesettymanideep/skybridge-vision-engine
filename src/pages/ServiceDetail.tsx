@@ -303,10 +303,10 @@ const ServiceDetail = () => {
           className="absolute inset-0 -z-10"
           style={{
             background:
-              "linear-gradient(135deg, hsl(var(--primary-deep) / 0.92) 0%, hsl(var(--primary) / 0.82) 55%, hsl(var(--dark) / 0.94) 100%)",
+              "linear-gradient(135deg, hsl(var(--primary-deep) / 0.55) 0%, hsl(var(--primary) / 0.4) 55%, hsl(var(--dark) / 0.6) 100%)",
           }}
         />
-        <div className="absolute inset-0 opacity-20 -z-10" style={{
+        <div className="absolute inset-0 opacity-10 -z-10" style={{
           backgroundImage: "radial-gradient(circle at 20% 30%, hsl(var(--accent)) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }} />
