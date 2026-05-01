@@ -153,31 +153,34 @@ export const HeroSlider = () => {
             {slides.map((s, idx) => idx === i && (
               <div key={`${idx}-${i}`} className="space-y-6">
                 <span
-                  className="inline-flex items-center px-4 py-2 rounded-full glass text-sm font-accent text-white animate-hero-line"
+                  className="inline-flex items-center px-4 py-2 rounded-full glass text-sm font-accent text-white animate-hero-badge"
                   style={{ animationDelay: "60ms" }}
                 >
                   {s.badge}
                 </span>
                 <h1
                   className="h-section font-biennale text-white text-3xl md:text-4xl lg:text-5xl !leading-[1.1] animate-hero-rise"
-                  style={{ animationDelay: "180ms" }}
+                  style={{ animationDelay: "220ms" }}
                 >
                   {s.title}
                 </h1>
                 <p
                   className="font-biennale text-base md:text-lg text-white/80 max-w-xl animate-hero-line"
-                  style={{ animationDelay: "360ms" }}
+                  style={{ animationDelay: "440ms" }}
                 >
                   {s.subtitle}
                 </p>
-                <div
-                  className="flex flex-wrap gap-4 animate-hero-line"
-                  style={{ animationDelay: "520ms" }}
-                >
-                  <Button variant="hero" size="xl">{s.ctaPrimary}</Button>
-                  <Button variant="heroOutline" size="xl">
-                    {s.ctaSecondary} <ArrowRight />
-                  </Button>
+                <div className="flex flex-wrap gap-4">
+                  <div className="animate-hero-cta" style={{ animationDelay: "640ms" }}>
+                    <Button variant="hero" size="xl" className="hero-cta-glow">
+                      {s.ctaPrimary}
+                    </Button>
+                  </div>
+                  <div className="animate-hero-cta" style={{ animationDelay: "760ms" }}>
+                    <Button variant="heroOutline" size="xl">
+                      {s.ctaSecondary} <ArrowRight />
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
