@@ -35,6 +35,7 @@ const testimonials = [
 
 const Index = () => {
   const [t, setT] = useState(0);
+  const [activeService, setActiveService] = useState<number | null>(null);
   const nextT = () => setT((x) => (x + 1) % testimonials.length);
   const prevT = () => setT((x) => (x - 1 + testimonials.length) % testimonials.length);
 
@@ -96,23 +97,27 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
-                <div className="group relative bg-card border border-border rounded-2xl p-8 h-full transition-smooth hover:-translate-y-2 hover:shadow-glow hover:border-primary/30 overflow-hidden isolate">
+                <div
+                  onClick={() => setActiveService((cur) => (cur === i ? null : i))}
+                  data-active={activeService === i}
+                  className="group relative bg-card border border-border rounded-2xl p-8 h-full transition-smooth hover:-translate-y-2 hover:shadow-glow hover:border-primary/30 overflow-hidden isolate cursor-pointer data-[active=true]:-translate-y-2 data-[active=true]:shadow-glow data-[active=true]:border-primary/30"
+                >
                   {/* Hover background image */}
                   <div
-                    className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-smooth duration-500 -z-10"
+                    className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth duration-500 -z-10"
                     style={{ backgroundImage: `url(${s.image})` }}
                     aria-hidden="true"
                   />
                   <div
-                    className="absolute inset-0 bg-gradient-to-t from-card via-card/85 to-card/60 opacity-0 group-hover:opacity-100 transition-smooth duration-500 -z-10"
+                    className="absolute inset-0 bg-gradient-to-t from-card via-card/85 to-card/60 opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth duration-500 -z-10"
                     aria-hidden="true"
                   />
                   <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center shadow-glow mb-6 relative">
                     <s.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="font-display font-bold text-xl mb-3 relative">{s.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed relative group-hover:text-foreground/90 transition-smooth">{s.desc}</p>
-                  <Link to="/services" className="mt-6 inline-flex items-center gap-1 text-sm font-accent font-semibold gradient-text opacity-0 group-hover:opacity-100 transition-smooth relative">
+                  <p className="text-muted-foreground text-sm leading-relaxed relative group-hover:text-foreground/90 group-data-[active=true]:text-foreground/90 transition-smooth">{s.desc}</p>
+                  <Link to="/services" className="mt-6 inline-flex items-center gap-1 text-sm font-accent font-semibold gradient-text opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth relative">
                     Learn More <ArrowRight className="w-4 h-4 text-primary" />
                   </Link>
                 </div>
