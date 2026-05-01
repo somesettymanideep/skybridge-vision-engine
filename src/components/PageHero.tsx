@@ -58,14 +58,13 @@ export const PageHero = ({
           <span className="mx-2">›</span> {breadcrumb}
         </p>
       </Reveal>
-      <Reveal delay={120}>
-        <h1 className="font-display font-extrabold text-4xl md:text-6xl leading-tight max-w-4xl mx-auto drop-shadow-[0_4px_30px_rgba(0,0,0,0.4)]">
-          {title}
-        </h1>
-      </Reveal>
-      <Reveal delay={240}>
-        <p className="mt-6 text-lg text-dark-foreground/85 max-w-2xl mx-auto">{subtitle}</p>
-      </Reveal>
+      {title && (
+        <Reveal delay={120}>
+          <h1 className="font-display font-extrabold text-4xl md:text-6xl leading-tight max-w-4xl mx-auto drop-shadow-[0_4px_30px_rgba(0,0,0,0.4)]">
+            {title}
+          </h1>
+        </Reveal>
+      )}
     </div>
   </section>
 );
