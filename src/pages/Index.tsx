@@ -109,14 +109,14 @@ const Index = () => {
                     aria-hidden="true"
                   />
                   <div
-                    className="absolute inset-0 bg-gradient-to-t from-card via-card/85 to-card/60 opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth duration-500 -z-10"
+                    className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60 opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth duration-500 -z-10"
                     aria-hidden="true"
                   />
                   <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center shadow-glow mb-6 relative">
                     <s.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-display font-bold text-xl mb-3 relative">{s.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed relative group-hover:text-foreground/90 group-data-[active=true]:text-foreground/90 transition-smooth">{s.desc}</p>
+                  <h3 className="font-display font-bold text-xl mb-3 relative group-hover:text-white group-data-[active=true]:text-white transition-smooth">{s.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed relative group-hover:text-white/85 group-data-[active=true]:text-white/85 transition-smooth">{s.desc}</p>
                   <Link to={`/services/${s.slug}`} className="mt-6 inline-flex items-center gap-1 text-sm font-accent font-semibold gradient-text opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-smooth relative">
                     Learn More <ArrowRight className="w-4 h-4 text-primary" />
                   </Link>
