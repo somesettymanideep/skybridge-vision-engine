@@ -27,9 +27,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
-        scrolled ? "bg-background/80 backdrop-blur-xl shadow-card" : "bg-transparent"
-      }`}
+      className="fixed top-0 inset-x-0 z-50 transition-smooth bg-white/95 backdrop-blur-xl shadow-card"
     >
       <nav className="container flex items-center justify-between h-20">
         <Logo className="h-9 md:h-10" />
