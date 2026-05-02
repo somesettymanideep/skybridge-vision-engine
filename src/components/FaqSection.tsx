@@ -35,12 +35,12 @@ export const FaqSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left image */}
           <Reveal>
-            <div className="relative w-full h-full">
+            <div className="relative w-full flex justify-center lg:justify-start overflow-hidden">
               <img
                 src={founder}
                 alt="Consultant pointing at FAQs"
                 loading="lazy"
-                className="w-full h-auto object-contain"
+                className="w-full max-w-md h-auto object-contain animate-slide-in-left"
               />
             </div>
           </Reveal>
