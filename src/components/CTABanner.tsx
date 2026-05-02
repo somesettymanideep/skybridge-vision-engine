@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+import ctaBg from "@/assets/cta-bg.jpg";
 
 export const CTABanner = () => (
-  <section className="relative py-24 overflow-hidden gradient-deep">
+  <section className="relative py-24 overflow-hidden">
+    {/* background image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url(${ctaBg})` }}
+      aria-hidden
+    />
+    <div className="absolute inset-0 gradient-deep opacity-85" aria-hidden />
     {/* particle dots */}
     <div className="absolute inset-0 opacity-40">
       {Array.from({ length: 30 }).map((_, i) => (
