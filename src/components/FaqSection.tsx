@@ -33,51 +33,15 @@ export const FaqSection = () => {
     <section className="py-24 bg-background">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left card */}
+          {/* Left image */}
           <Reveal>
-            <div className="relative bg-card border border-dashed border-border rounded-3xl p-8 md:p-12 text-center">
-              <div className="relative mx-auto w-full max-w-sm aspect-[3/4] rounded-3xl bg-secondary overflow-hidden">
-                <img
-                  src={founder}
-                  alt="Consultant pointing"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <p className="mt-4 font-biennale font-extrabold uppercase tracking-wider">Adam Smith</p>
-              <p className="text-sm text-muted-foreground">Founder</p>
-
-              <h3 className="mt-8 font-biennale font-extrabold uppercase text-xl md:text-2xl tracking-tight">
-                Do you have more questions?
-              </h3>
-              <p className="mt-4 text-muted-foreground leading-relaxed max-w-md mx-auto">
-                Working with this team was a fantastic experience. Their creativity, professionalism, and
-                attention to detail helped our business grow faster than expected.
-              </p>
-
-              <div className="mt-7 flex justify-center gap-3">
-                {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    aria-label="social"
-                    className="w-10 h-10 rounded-full bg-secondary text-foreground/70 flex items-center justify-center hover:gradient-primary hover:text-white transition-smooth"
-                  >
-                    <Icon className="w-4 h-4" />
-                  </a>
-                ))}
-              </div>
-
-              <p className="mt-5 flex items-center justify-center gap-2 font-biennale font-bold text-lg">
-                <Phone className="w-4 h-4 text-primary" /> +971 4 123 4567
-              </p>
-
-              <a
-                href="tel:+97141234567"
-                className="mt-6 inline-flex items-center gap-2 gradient-primary text-white font-accent font-semibold rounded-full px-8 py-4 shadow-glow hover:-translate-y-0.5 transition-smooth"
-              >
-                Shoot A Direct Call
-              </a>
+            <div className="relative w-full h-full">
+              <img
+                src={founder}
+                alt="Consultant pointing at FAQs"
+                loading="lazy"
+                className="w-full h-auto object-contain"
+              />
             </div>
           </Reveal>
 
