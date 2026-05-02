@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronRight, ChevronDown, Facebook, Twitter, Instagram, Linkedin, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
-import founder from "@/assets/founder.jpg";
+import founder from "@/assets/faq-person.png";
 
 const faqs = [
   {
@@ -36,12 +36,12 @@ export const FaqSection = () => {
           {/* Left card */}
           <Reveal>
             <div className="relative bg-card border border-dashed border-border rounded-3xl p-8 md:p-12 text-center">
-              <div className="relative mx-auto w-40 h-40 rounded-full bg-secondary flex items-center justify-center">
+              <div className="relative mx-auto w-full max-w-sm aspect-[3/4] rounded-3xl bg-secondary overflow-hidden">
                 <img
                   src={founder}
-                  alt="Founder portrait"
+                  alt="Consultant pointing"
                   loading="lazy"
-                  className="w-32 h-32 rounded-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <p className="mt-4 font-biennale font-extrabold uppercase tracking-wider">Adam Smith</p>
