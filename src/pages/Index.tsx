@@ -6,6 +6,7 @@ import { Marquee } from "@/components/Marquee";
 import { Reveal } from "@/components/Reveal";
 import { StatsSection } from "@/components/StatsSection";
 import { CTABanner } from "@/components/CTABanner";
+import { FaqSection } from "@/components/FaqSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import team1 from "@/assets/team-1.jpg";
