@@ -191,6 +191,7 @@ const Index = () => {
         </div>
       </section>
 
+      <FaqSection />
       <CTABanner />
     </Layout>
   );
