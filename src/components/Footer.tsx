@@ -76,7 +76,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
+      <div className="relative z-10 border-t border-white/10">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-dark-foreground/60">
           <p>© 2025 SkyBridge International Consultancy. All Rights Reserved.</p>
           <div className="flex gap-6">
