@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const PHONE = "971501234567"; // international format, no '+' or spaces
+const PHONE = "918948649023"; // international format, no '+' or spaces
 const MESSAGE = "Hi SkyBridge! I'd like to learn more about your services.";
 
 export const WhatsAppButton = () => {
