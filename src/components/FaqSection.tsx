@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronRight, ChevronDown, Facebook, Twitter, Instagram, Linkedin, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
-import founder from "@/assets/founder.jpg";
+import founder from "@/assets/faq-person.png";
 
 const faqs = [
   {
