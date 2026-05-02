@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import { Logo } from "./Logo";
+import footerBg from "@/assets/footer-bg.jpg";
 
 export const Footer = () => {
   return (
-    <footer className="bg-dark text-dark-foreground">
-      <div className="container py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="relative bg-dark text-dark-foreground overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-40"
+        style={{ backgroundImage: `url(${footerBg})` }}
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/85 via-dark/90 to-dark" aria-hidden />
+      <div className="container relative z-10 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <Logo className="h-14" inverted />
           <p className="mt-4 font-accent text-sm text-primary-glow">Bridging Your Business to the Digital Sky</p>
@@ -69,7 +76,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
+      <div className="relative z-10 border-t border-white/10">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-dark-foreground/60">
           <p>© 2025 SkyBridge International Consultancy. All Rights Reserved.</p>
           <div className="flex gap-6">
