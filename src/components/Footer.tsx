@@ -63,9 +63,9 @@ export const Footer = () => {
         <div>
           <h4 className="font-display font-bold text-lg mb-5">Get In Touch</h4>
           <ul className="space-y-4 text-sm text-dark-foreground/75">
-            <li className="flex gap-3"><MapPin className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" /> Sheikh Zayed Road, Dubai, UAE</li>
-            <li className="flex gap-3"><Phone className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" /> +971 4 123 4567</li>
-            <li className="flex gap-3"><Mail className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" /> hello@skybridge.com</li>
+            <li className="flex gap-3"><MapPin className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" /> 929 Hidden Rdg, Irving, Texas, 75048, United States Of America</li>
+            <li className="flex gap-3"><Phone className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" /> +1(469) 282-2244</li>
+            <li className="flex gap-3"><Mail className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" /> contactus@skybridgeinternational.org</li>
           </ul>
           <Link
             to="/contact"

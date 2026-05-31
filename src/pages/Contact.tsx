@@ -134,9 +134,9 @@ const Contact = () => {
           <Reveal className="lg:col-span-2" delay={120}>
             <div className="space-y-4">
               {[
-                { icon: MapPin, label: "Office Address", value: "Sheikh Zayed Road, Dubai, UAE" },
-                { icon: Phone, label: "Phone Number", value: "+971 4 123 4567" },
-                { icon: Mail, label: "Email Address", value: "hello@skybridge.com" },
+                { icon: MapPin, label: "Office Address", value: "929 Hidden Rdg, Irving, Texas, 75048, United States Of America" },
+                { icon: Phone, label: "Phone Number", value: "+1(469) 282-2244" },
+                { icon: Mail, label: "Email Address", value: "contactus@skybridgeinternational.org" },
                 { icon: Clock, label: "Business Hours", value: "Sun – Thu · 9:00 – 18:00 GST" },
               ].map((c) => (
                 <div key={c.label} className="bg-card border border-border rounded-2xl p-5 flex items-start gap-4 hover:shadow-glow hover:border-primary/30 transition-smooth">
